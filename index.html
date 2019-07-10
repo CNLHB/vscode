@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<span class="a">1</span>
+<span class="a">2</span>
+<span class="a">3</span>
+<span class="a">4</span>
+<span class="a">5</span>
+
+<script type="text/javascript" src="library.js">
+	
+</script>
+
+<script type="text/javascript">
+var a  = '这是个屁';
+
+console.log(encodeURI(a));
+var b = decodeURIComponent(a);
+//QueryString 后台
+console.log(encodeURIComponent(b));
+//		ajax("GET","http://jsonplaceholder.typicode.com/comments",'postId=1',show,true);
+		ajax("POST","http://jsonplaceholder.typicode.com/comments",'postId=1',show,true);
+		function show(data){
+					var value = data;
+					var str = '';
+					value.forEach(function(ele,index){
+						str = ele.id;
+						document.getElementsByTagName('body')[0].innerText = str;
+						console.log(str)
+					})
+		
+
+	
+}
+</script>
+
+
+</body>
+</html>
